@@ -1,0 +1,33 @@
+.relax{
+	color: rgb(110, 173, 194);
+}
+.stress{
+	color: red;
+}
+.container{
+	width: 100%;
+	/* background-color: #eee; */
+}
+.tab{
+	width: 600px;
+	text-align: center;
+	margin: 0 auto;
+}
+.send{
+	width: 80px;
+	margin: 10px auto;
+}
+.send a{
+	text-decoration: none;
+}
+.status{
+	color: red;
+}
+
+tr:nth-child(odd){
+	background-color: #ffc;
+}
+
+tr:nth-child(even){
+	background-color: #fff;
+}
