@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=	, initial-scale=	">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/style1.css">
 </head>
 <body>
 	<?php $result = include './undone.php';?>
@@ -15,7 +15,15 @@
 			<td colspan="4"><b>青年大学习观看率连续三次小于90%，班级的评优评先将<span class="stress">全部取消!</span></b></td>
 		</tr>
 		<tr>
-			<td colspan="4"><b>未观看青年大学习的团员</b></td>
+			<td colspan="4">
+				<b>未观看青年大学习的团员 ||</b>
+				<span class="rate"><b>目前观看率：</b><?php $rate = round((100*(32-count($result))/32),2).'%';
+			if($rate<90){
+				echo '<span class="error">'.$rate.'</span>';
+			}elseif($rate >=90 &&$rate<=100){
+				echo '<span class="success">'.$rate.'</span>';
+			}
+			?></span><b> || 望各位团员互相监督</b></td>
 		</tr>
 		<tr>
 			<td>编号</td>
@@ -40,7 +48,7 @@
             if ($lastDays >= 4 && $lastDays<=6) {
                 // 当剩余天数大于等于4小于等于6时显示浅蓝色
                 echo '还剩<span class="relax">'.$lastDays.'</span>天';
-            }elseif ($lastDays<4) {
+            } elseif ($lastDays<4) {
                 // 当剩余天数小于等于3时显示红色
                 echo '<span class="
 				stress">还剩'.$lastDays.'天</span>';
