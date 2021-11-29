@@ -12,24 +12,24 @@
 	
 	<table class="tab" border="2">
 		<tr>
-			<td colspan="4"><b>青年大学习观看率连续三次小于90%，班级的评优评先将<span class="stress">全部取消!</span></b></td>
+			<td colspan="4"><b>青年大学习观看率连续三次小于<span class="stress">90%</span>，班级的评优评先将<span class="stress">全部取消!</span></b></td>
 		</tr>
 		<tr>
 			<td colspan="4">
 				<b>未观看青年大学习的团员 ||</b>
-				<span class="rate"><b>目前观看率：</b><?php $rate = round((100*(32-count($result))/32),2).'%';
-			if($rate<90){
-				echo '<span class="error">'.$rate.'</span>';
-			}elseif($rate >=90 &&$rate<=100){
-				echo '<span class="success">'.$rate.'</span>';
-			}
-			?></span><b> || 望各位团员互相监督</b></td>
+				<span class="rate"><b>目前观看率：</b><?php $rate = round((100*(32-count($result))/32), 2).'%';
+            if ($rate<90) {
+                echo '<span class="error">'.$rate.'</span>';
+            } elseif ($rate >=90 &&$rate<=100) {
+                echo '<span class="success">'.$rate.'</span>';
+            }
+            ?></span><b> || 望各位团员互相监督</b></td>
 		</tr>
 		<tr>
 			<td>编号</td>
 			<td>姓名</td>
 			<td>status</td>
-			<td>倒计时</td>
+			<td>剩余时间</td>
 		</tr>
 		<?php
         $i=1;
