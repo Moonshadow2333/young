@@ -41,8 +41,9 @@
 			<td class="status">未看</td>
 			<td>
 				<?php
-                //先定义一个数组
-                $weekarray=array("7","1","2","3","4","5","6");
+                date_default_timezone_set('PRC');
+            //先定义一个数组
+            $weekarray=array("7","1","2","3","4","5","6");
             // 剩余天数
             $lastDays =  6 - $weekarray[date("w")];
             if ($lastDays >= 4 && $lastDays<=6) {

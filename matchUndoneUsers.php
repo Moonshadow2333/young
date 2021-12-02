@@ -68,7 +68,7 @@ function getFileName($dirName)
 function solveException($lat)
 {
     // 解决异常，高如彤和徐升泽填错了信息。
-    $exception = ['142181923','徐升泽/1420181940'];
+    $exception = ['1420181923','徐升泽/1420181940'];
     $normal = ['高如彤','徐升泽'];
     for ($i=0; $i < count($exception); $i++) {
         if (member($exception[$i], $lat)) {
